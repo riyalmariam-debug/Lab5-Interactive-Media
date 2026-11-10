@@ -1,0 +1,15 @@
+body { margin: 0; padding: 35px 20px; background: #f3efe6; color: #243b30; font-family: Arial, sans-serif; }
+main { max-width: 640px; margin: auto; }
+h1 { font: 2.2rem Georgia, serif; }
+p { line-height: 1.7; }
+.label { font-size: 11px; letter-spacing: 1px; }
+#scene { overflow: hidden; margin: 25px 0; border: 1px solid #bcc9bc; }
+svg { display: block; width: 100%; }
+.ripples { animation: drift 2s ease-in-out infinite alternate; animation-play-state: paused; }
+#scene.playing .ripples { animation-play-state: running; }
+@keyframes drift { from { transform: translateX(0); } to { transform: translateX(18px); } }
+label, input, audio { display: block; margin-top: 15px; }
+input, audio { width: 100%; }
+.note { font-size: 12px; color: #5c695d; }
+:focus-visible { outline: 3px solid #93734d; outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { .ripples { animation: none; } #scene.playing { border: 3px solid #93734d; } }

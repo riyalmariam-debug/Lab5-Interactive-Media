@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oakville by the Lake — Lab 5 Starter</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <p class="label">LAB 5 · CLASS PROGRESS</p>
+    <h1>Oakville by the Lake</h1>
+    <p>A first experiment with sound and a moving lakeside scene.</p>
+    <div id="scene">
+      <svg viewBox="0 0 600 280" role="img" aria-labelledby="sceneTitle sceneDescription">
+        <title id="sceneTitle">A simple lakeside illustration</title>
+        <desc id="sceneDescription">A warm sun above blue water and a green shoreline, inspired by Oakville.</desc>
+        <rect width="600" height="280" fill="#cbdde0"/>
+        <circle cx="450" cy="70" r="30" fill="#e8c98b"/>
+        <path d="M0 160 Q140 110 270 160 T600 155 V280 H0Z" fill="#71866f"/>
+        <path d="M0 185 Q160 165 310 190 T600 180 V280 H0Z" fill="#759ca6"/>
+        <g class="ripples" fill="none" stroke="#d8e8e4" stroke-width="3">
+          <path d="M40 210 Q80 200 120 210 T200 210 M280 230 Q320 220 360 230 T440 230 M460 200 Q500 190 540 200"/>
+        </g>
+      </svg>
+    </div>
+    <label for="audioFile">Try a sound file from your computer:</label>
+    <input id="audioFile" type="file" accept="audio/*">
+    <audio id="player" controls preload="metadata" aria-label="Sound experiment"></audio>
+    <p id="status" role="status">Choose an audio file, then press Play to animate the water.</p>
+    <p class="note">Work in progress: the 60–90 second hometown soundscape has not been made yet. The selected file plays locally and is not uploaded.</p>
+  </main>
+</body>
+</html>
